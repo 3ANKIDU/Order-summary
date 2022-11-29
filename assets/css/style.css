@@ -1,0 +1,149 @@
+/* importing the font */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* variables */
+
+:root{
+    --pale--blue: hsl(225, 100%, 94%);
+    --bright--blue: hsl(245, 75%, 52%);
+    --very--pale--blue: hsl(225, 100%, 98%);
+    --desaturated--blue: hsl(224, 23%, 55%);
+    --dark--blue: hsl(223, 47%, 23%);
+}
+
+/* resting everything */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* typography */
+
+h1,h1,p, button{
+    font-family: 'Red Hat Display', sans-serif;
+    margin-bottom: 1em;
+}
+
+h1,h2{
+    color: var(--dark--blue);
+}
+
+h1,h2,button{
+    font-weight: 900 !important;
+}
+
+h2{
+    font-size: .8rem;
+}
+button{
+    font-weight: 700;
+}
+
+h2, .price{
+    font-size: .8rem;
+}
+p, .cancelOrder{
+    color: var(--desaturated--blue);
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+/* layout */
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--pale--blue);
+    padding: 1em;
+}
+
+.orderCard{
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 .5em .5em;
+    max-width: 20em;
+}
+
+.container{
+    padding: 1em;
+}
+
+.hero{
+    width: 100%;
+    border-radius: .5em .5em 0 0;
+}
+
+.greyBackground{
+    background-color: var(--pale--blue);
+    min-height: 3em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+}
+
+.floatLeft{
+    float: left;
+}
+
+.icon{
+    width: 20%;
+    max-width: 3em;
+    margin-right: .25em;
+    position: relative;
+    top: -.4em;
+}
+
+.transparentBut{
+    border: none;
+    background-color: transparent;
+}
+
+.changeBut{
+    color: var(--bright--blue);
+    border-bottom: 1px solid var(--very--bright--blue);
+    margin-bottom: .1em;
+    margin-top: .6em;
+}
+
+.changeBut:hover{
+    color: var(--dark--blue);
+}
+
+.paymentBut{
+    background-color: var(--bright--blue);
+    color: white;
+    width: 100%;
+    height: 2.5em;
+    border: none;
+    border-radius: .5em;
+}
+
+.box-shadow{
+    box-shadow: 0 .5em 1em hsl(223, 47%, 23%, .400);
+}
+
+.paymentBut:hover{
+    background-color: var(--dark--blue);
+}
+
+.paymentBut:hover, .changeBut:hover, .cancelOrder:hover{
+    cursor: pointer;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 769px){
+    body{
+        background-image: url('../images/pattern-background-desktop.svg');
+    }
+}
